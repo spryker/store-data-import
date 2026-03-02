@@ -39,9 +39,6 @@ class StoreDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testStoreImportImportsData(): void
     {
         // Arrange
@@ -64,9 +61,6 @@ class StoreDataImportPluginTest extends Unit
         $this->assertTrue($this->tester->storeWithNameExists($storeTransfer->getNameOrFail(), 'Store should exist in DB.'));
     }
 
-    /**
-     * @return void
-     */
     public function testStoreGetImportTypeReturnsTypeOfImporter(): void
     {
         // Arrange

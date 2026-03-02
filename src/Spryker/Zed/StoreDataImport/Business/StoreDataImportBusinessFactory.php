@@ -19,9 +19,6 @@ use Spryker\Zed\StoreDataImport\StoreDataImportDependencyProvider;
  */
 class StoreDataImportBusinessFactory extends DataImportBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getStoreDataImporter(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig($this->getConfig()->getStoreDataImporterConfiguration());
@@ -35,9 +32,6 @@ class StoreDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStoreDataImportStep(): DataImportStepInterface
     {
         return new StoreDataImportStep($this->getStorePropelQuery());
