@@ -13,6 +13,8 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class StoreDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_STORE = 'store';
